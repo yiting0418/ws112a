@@ -27,16 +27,16 @@ app.use(async (ctx) => {
       <a href="https://nqu.edu.tw//">金門大學</a>
     `);
   } 
-  else if (ctx.request.url.pathname === "/nqu/csie/") {
+  else if (ctx.request.url.pathname === "/nqu/csie") {
     ctx.response.body = page(`
-      <a href="https://csie.nqu.edu.tw//">金門大學資工系</a>
+      <a href="https://csie.nqu.edu.tw">金門大學資工系</a>
     `);
   } 
-  else if (ctx.request.url.pathname === "/to/nqu/") {
-    ctx.response.redirect("https://nqu.edu.tw//");
+  else if (ctx.request.url.pathname === "/to/nqu") {
+    ctx.response.redirect("https://nqu.edu.tw");
   } 
-  else if (ctx.request.url.pathname === "/to/nqu/csie/") {
-    ctx.response.redirect("https://nqu.edu.tw//");
+  else if (ctx.request.url.pathname === "/to/nqu/csie") {
+    ctx.response.redirect("https://nqu.edu.tw");
   } 
 });
 
