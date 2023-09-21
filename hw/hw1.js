@@ -22,7 +22,7 @@ app.use(async (ctx) => {
         </body>
     </html>`;
   
-  if (ctx.request.url.pathname === "/nqu/") {
+  if (ctx.request.url.pathname === "/nqu") {
     ctx.response.body = page(`
       <a href="https://nqu.edu.tw//">金門大學</a>
     `);
