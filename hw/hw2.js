@@ -24,10 +24,26 @@ router
     context.response.body = "Hello world!";
   })
   .get("/nqu", (context) => {
-    context.response.body = `<html><body><a href="https://nqu.edu.tw"></a></body></html>`;
+    context.response.body = 
+    `<html>
+      <body>
+        <a href="https://nqu.edu.tw">金門大學</a>
+      </body>
+    </html>`;
   })
   .get("/nqu/csie", (context) => {
-    context.response.body = `<html><body><a href="https://csie.nqu.edu.tw"></a></body></html>`;
+    context.response.body = 
+    `<html>
+      <body>
+        <a href="https://csie.nqu.edu.tw">金門大學資訊工程學系</a>
+      </body>
+    </html>`;
+  })
+  .get("/to/nqu", (context) => {
+    context.response.redirect('https://www.nqu.edu.tw/')
+  })
+  .get("/to/nqu/csie", (context) => {
+    context.response.redirect('https://csie.nqu.edu.tw/')
   })
   .get("/nqu/room/:id", (context) => {
     if (context.params && context.params.id && room.has(context.params.id)) {
