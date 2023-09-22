@@ -39,6 +39,12 @@ router
     if (context.params && context.params.id && room.has(context.params.id)) {
       context.response.body = Array.from(room.get(context.params.id));
     }
+  })
+  .get("/to/nqu", (context) => {
+    context.response.redirect('https://www.nqu.edu.tw/')
+  })
+  .get("/to/nqu/csie", (context) => {
+    context.response.redirect('https://csie.nqu.edu.tw/')
   });
 
 const app = new Application();
