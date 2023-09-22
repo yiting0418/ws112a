@@ -1,26 +1,20 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-const books = new Map();
+const room = new Map();
 
-books.set("nqu", {
-  website: `<a href="https://nqu.edu.tw"></a>`,
-});
-books.set("nqu csie", {
-  website: `<a href="https://csie.nqu.edu.tw"></a>`,
-});
-books.set("319", {
+room.set("319", {
   id: "319",
   name: "數位系統應用實驗室",
 });
-books.set("320", {
+room.set("320", {
   id: "320",
   name: "多媒體實驗室",
 });
-books.set("321", {
+room.set("321", {
   id: "321",
   name: "電腦網路實驗室",
 });
-books.set("322", {
+room.set("322", {
   id: "322",
   name: "嵌入式實驗室",
 });
@@ -29,10 +23,13 @@ router
   .get("/", (context) => {
     context.response.body = "Hello world!";
   })
-  .get("/book", (context) => {
-    context.response.body = Array.from(books.values());
+  .get("/nqu", (context) => {
+    context.response.body = `<html><body><a href="https://nqu.edu.tw"></a></body></html>`;
   })
-  .get("/book/:id", (context) => {
+  .get("/nqu/csie", (context) => {
+    context.response.body = `<html><body><a href="https://csie.nqu.edu.tw"></a></body></html>`;
+  })
+  .get("/nqu/room/:id", (context) => {
     if (context.params && context.params.id && books.has(context.params.id)) {
       context.response.body = books.get(context.params.id);
     }
