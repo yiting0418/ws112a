@@ -2,21 +2,21 @@ import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
 const room = new Map();
 
-room.set("319", {
-  id: "319",
-  name: "數位系統應用實驗室",
+room.set("e319", {
+  教室: "e319",
+  功能: "數位系統應用實驗室",
 });
-room.set("320", {
-  id: "320",
-  name: "多媒體實驗室",
+room.set("e320", {
+  教室: "e320",
+  功能: "多媒體實驗室",
 });
-room.set("321", {
-  id: "321",
-  name: "電腦網路實驗室",
+room.set("e321", {
+  教室: "e321",
+  功能: "電腦網路實驗室",
 });
-room.set("322", {
-  id: "322",
-  name: "嵌入式實驗室",
+room.set("e322", {
+  教室: "e322",
+  功能: "嵌入式實驗室",
 });
 const router = new Router();
 router
