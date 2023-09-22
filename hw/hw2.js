@@ -30,8 +30,8 @@ router
     context.response.body = `<html><body><a href="https://csie.nqu.edu.tw"></a></body></html>`;
   })
   .get("/nqu/room/:id", (context) => {
-    if (context.params && context.params.id && books.has(context.params.id)) {
-      context.response.body = books.get(context.params.id);
+    if (context.params && context.params.id && room.has(context.params.id)) {
+      context.response.body = room.get(context.params.id);
     }
   });
 
