@@ -22,20 +22,20 @@ app.use(async (ctx) => {
         </body>
     </html>`;
   
-  if (ctx.request.url.pathname === "/nqu") {
+  if (ctx.request.url.pathname === "/nqu/") {
     ctx.response.body = page(`
       <a href="https://nqu.edu.tw//">金門大學</a>
     `);
   } 
-  else if (ctx.request.url.pathname === "/nqu/csie") {
+  else if (ctx.request.url.pathname === "/nqu/csie/") {
     ctx.response.body = page(`
       <a href="https://csie.nqu.edu.tw">金門大學資工系</a>
     `);
   } 
-  else if (ctx.request.url.pathname === "/to/nqu") {
+  else if (ctx.request.url.pathname === "/to/nqu/") {
     ctx.response.redirect("https://nqu.edu.tw");
   } 
-  else if (ctx.request.url.pathname === "/to/nqu/csie") {
+  else if (ctx.request.url.pathname === "/to/nqu/csie/") {
     ctx.response.redirect("https://csie.nqu.edu.tw");
   } 
 });
