@@ -66,7 +66,6 @@ router
       }
   }
 })
- //yadbfhebdgaufhbandi
   .get("/public/(.*)", async (ctx) => {
     let wpath = ctx.params[0]
     console.log('wpath=', wpath)
